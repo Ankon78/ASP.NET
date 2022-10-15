@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+<form action="" method="POST">
+
+
+    <h3>Are you sure to delete?</h3>
+    <h4>Name:@Model.Name</h4>
+    <h4>Name:@Model.Age</h4>
+    <h4>Name:@Model.Dept</h4>
+    <input type="hidden" name="id" value="@Model.id" />
+    <input type="submit" value="Delete" class="btn-danger" />
+</form>
