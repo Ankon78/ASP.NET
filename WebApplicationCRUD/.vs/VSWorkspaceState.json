@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\WebApplicationCRUD",
+    "\\WebApplicationCRUD\\fonts",
+    "\\WebApplicationCRUD\\Models",
+    "\\WebApplicationCRUD\\obj",
+    "\\WebApplicationCRUD\\Properties",
+    "\\WebApplicationCRUD\\Views",
+    "\\WebApplicationCRUD\\Views\\Student"
+  ],
+  "SelectedNode": "\\WebApplicationCRUD\\Views\\Student\\Index.cshtml",
+  "PreviewInSolutionExplorer": false
+}

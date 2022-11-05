@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+    <form action="" method="POST" >
+        <input type="hidden" name="id" value="@Model.Id" placeholder="id" class="form-control" />
+        <input type="text" name="Name" value="@Model.Name" placeholder="Name" class="form-control" />
+        <input type="text" name="Price" value="@Model.Price" placeholder="Price" class="form-control" />
+        <input type="text" name="Qty" value="@Model.Qty" placeholder="Quantity" class="form-control" />
+        <input type="submit" value="Create" class="btn-primary"/>
+    </form>
+

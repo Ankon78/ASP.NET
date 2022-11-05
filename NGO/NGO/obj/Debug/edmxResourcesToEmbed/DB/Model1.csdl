@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NGOModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="FoodDetailsid">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_id" Type="Int32" Nullable="false" />
+    <Property Name="Food_id" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Food" Relationship="Self.FK_FoodDetailsid_Foods" FromRole="FoodDetailsid" ToRole="Foods" />
+    <NavigationProperty Name="User" Relationship="Self.FK_FoodDetailsid_Users" FromRole="FoodDetailsid" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Food">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ResturantName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="FoodDetailsids" Relationship="Self.FK_FoodDetailsid_Foods" FromRole="Foods" ToRole="FoodDetailsid" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="FoodDetailsids" Relationship="Self.FK_FoodDetailsid_Users" FromRole="Users" ToRole="FoodDetailsid" />
+  </EntityType>
+  <Association Name="FK_FoodDetailsid_Foods">
+    <End Role="Foods" Type="Self.Food" Multiplicity="1" />
+    <End Role="FoodDetailsid" Type="Self.FoodDetailsid" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Foods">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="FoodDetailsid">
+        <PropertyRef Name="Food_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FoodDetailsid_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="FoodDetailsid" Type="Self.FoodDetailsid" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="FoodDetailsid">
+        <PropertyRef Name="User_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="NGOEntities4" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="FoodDetailsids" EntityType="Self.FoodDetailsid" />
+    <EntitySet Name="Foods" EntityType="Self.Food" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK_FoodDetailsid_Foods" Association="Self.FK_FoodDetailsid_Foods">
+      <End Role="Foods" EntitySet="Foods" />
+      <End Role="FoodDetailsid" EntitySet="FoodDetailsids" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FoodDetailsid_Users" Association="Self.FK_FoodDetailsid_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="FoodDetailsid" EntitySet="FoodDetailsids" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Product";
+}
+
+<h2>Product</h2>
+
+<a href="/Product/Cart" class="btn btn-info">
+    <span class="glyphicon
+                        glyphicon-shopping-cart">
+    </span>Show Cart
+</a>
+<div>
+    <table class="table">
+
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Price</td>
+                <td>Quantity</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead>
+        @foreach (var it in Model)
+        {
+            <tr>
+                <td>@it.Id</td>
+                <td>@it.Name</td>
+                <td>@it.Price</td>
+                <td>@it.Qty</td>
+               <td><input type="submit" value="Add To Cart" class="btn btn-info" /></td>
+
+            </tr>
+        }
+
+    </table>
+</div>
