@@ -6,8 +6,8 @@
 
 <h2>AddEmployee</h2>
 @if(Session["cart"] != null){
-    @*foreach (var cart in (List<NGO.DB.Food>)Session["cart"])*@
-     foreach (var cart in Model)
+    foreach (var cart in (List<NGO.DB.Food>)Session["cart"])
+     //foreach (var cart in Model)
     {
 
 <form action="" method="POST">

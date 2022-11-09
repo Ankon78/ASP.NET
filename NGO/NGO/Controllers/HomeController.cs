@@ -38,7 +38,7 @@ namespace NGO.Controllers
         [HttpPost]
         public ActionResult Login(User r)
         {
-            NGOEntities4 nGOEntities = new NGOEntities4();
+            NGOEntities5 nGOEntities = new NGOEntities5();
             var login = (from c in nGOEntities.Users
                          where c.Name == r.Name && c.Password == r.Password 
                          select c);
@@ -62,10 +62,10 @@ namespace NGO.Controllers
         public ActionResult Registration(User u)
         {
             
-            NGOEntities4 nGOEntities = new NGOEntities4();
+            NGOEntities5 nGOEntities = new NGOEntities5();
             nGOEntities.Users.Add(u);
             nGOEntities.SaveChanges();
-            return RedirectToAction("Login");
+            return RedirectToAction("Index","Home");
             //return View(u);
         }
 

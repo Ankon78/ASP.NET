@@ -4,10 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="91748718e6aa484da45f9c85f62d523e" Name="Diagram1">
+      <Diagram DiagramId="17651c79fb60452e88baa52b11d97103" Name="Diagram1">
+        <EntityTypeShape EntityType="NGOModel.Employee" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="NGOModel.FoodDetailsid" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="NGOModel.Food" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="NGOModel.sysdiagram" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NGOModel.sysdiagram" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="NGOModel.User" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
         <AssociationConnector Association="NGOModel.FK_FoodDetailsid_Foods" ManuallyRouted="false" />
         <AssociationConnector Association="NGOModel.FK_FoodDetailsid_Users" ManuallyRouted="false" />

@@ -22,7 +22,7 @@ namespace NGO.Controllers
         [HttpPost]
         public ActionResult Login(User r)
         {
-            NGOEntities4 nGOEntities = new NGOEntities4();
+            NGOEntities5 nGOEntities = new NGOEntities5();
             var login = (from c in nGOEntities.Users
                          where c.Name == r.Name && c.Password == r.Password
                          select c);
@@ -40,20 +40,20 @@ namespace NGO.Controllers
         [HttpPost]
         public ActionResult Create(Food f)
         {
-            NGOEntities4 nGOEntities = new NGOEntities4();
+            NGOEntities5 nGOEntities = new NGOEntities5();
             nGOEntities.Foods.Add(f);
             nGOEntities.SaveChanges();
             return RedirectToAction("Index","Doner");
         }
         public ActionResult List()
         {
-            var db = new NGOEntities4();
+            var db = new NGOEntities5();
             var foods = db.Foods.ToList();
             return View(foods);
         }
         public ActionResult Edit(int id)
         {
-            var db = new NGOEntities4();
+            var db = new NGOEntities5();
             var ext = (from it in db.Foods
                        where it.id == id
                        select it).SingleOrDefault();
@@ -62,7 +62,7 @@ namespace NGO.Controllers
         [HttpPost]
         public ActionResult Edit(Food f)
         {
-            var db = new NGOEntities4();
+            var db = new NGOEntities5();
             var ext = (from it in db.Foods
                        where it.id == f.id
                        select it).SingleOrDefault();
@@ -77,7 +77,7 @@ namespace NGO.Controllers
         [HttpGet]
         public ActionResult Delete(int id)
         {
-            var db = new NGOEntities4();
+            var db = new NGOEntities5();
             var ext = (from it in db.Foods
                        where it.id == id
                        select it).SingleOrDefault();
@@ -86,7 +86,7 @@ namespace NGO.Controllers
         [HttpPost]
         public ActionResult Delete(Food s)
         {
-            var db = new NGOEntities4();
+            var db = new NGOEntities5();
             var ext = (from it in db.Foods
                        where it.id == s.id
                        select it).SingleOrDefault();

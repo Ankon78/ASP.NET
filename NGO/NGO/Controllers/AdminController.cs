@@ -18,7 +18,7 @@ namespace NGO.Controllers
         }
         public ActionResult List()
         {
-            var db = new NGOEntities4();
+            var db = new NGOEntities5();
             var foods = db.Foods.ToList();
             return View(foods);
         }

@@ -13,10 +13,10 @@ namespace NGO.DB
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class NGOEntities4 : DbContext
+    public partial class NGOEntities5 : DbContext
     {
-        public NGOEntities4()
-            : base("name=NGOEntities4")
+        public NGOEntities5()
+            : base("name=NGOEntities5")
         {
         }
     
@@ -24,12 +24,8 @@ namespace NGO.DB
         {
             throw new UnintentionalCodeFirstException();
         }
-
-        internal object find(int id)
-        {
-            throw new NotImplementedException();
-        }
-
+    
+        public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<FoodDetailsid> FoodDetailsids { get; set; }
         public virtual DbSet<Food> Foods { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }

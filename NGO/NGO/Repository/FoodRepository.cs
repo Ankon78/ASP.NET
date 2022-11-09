@@ -8,11 +8,11 @@ namespace NGO.Repository
 {
     public class FoodRepository
     {
-        static NGOEntities4 db;
+        static NGOEntities5 db;
         
         static FoodRepository()
         {
-            db = new NGOEntities4();
+            db = new NGOEntities5();
         }
         public static Food Get(int id)
         {

@@ -1,0 +1,46 @@
+﻿@*@model IEnumerable<NGO.DB.Employee>*@
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+
+
+<div>
+    <table class="table">
+
+        <thead>
+            <tr>
+                <td>id</td>
+                <td>Name</td>
+                <td>Role</td>
+                <td>Phone</td>
+                <td>Email</td>
+                <td>Location</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead>
+        @foreach (var it in Model)
+        {
+            <tr>
+                <td>@it.id</td>
+                <td>@it.Name</td>
+                <td>@it.Role</td>
+                <td>@it.Phone</td>
+                <td>@it.Email</td>
+                <td>@it.Location</td>
+                <td>
+                    <a href="/Employee/Edit/@it.id" class="btn btn-success "><i class="bi-pencil-square"></i>Edit</a>
+                    <a href="/Employee/Delete/@it.id" class="btn btn-danger "><i class="bi bi-trash"></i>Delete</a>
+
+                </td>
+
+
+            </tr>
+        }
+
+    </table>
+</div>
