@@ -43,8 +43,8 @@
             
         </td>
         <td>
-            @*<a class="btn " href="/Admin/AddEmployees">AddEmployee</a>*@
-           @* @Html.ActionLink("Assign Employee", "AddEmployees","Admin", new { id=item.id }) |*@
+            <a class="btn " href="/Admin/AddEmployees/@item.id">AddEmployee</a>
+            @*@Html.ActionLink("Assign Employee", "AddEmployees","Admin", new { id=item.id }) |*@
             @Html.ActionLink("Details", "Details", new { id=item.id }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.id })
         </td>

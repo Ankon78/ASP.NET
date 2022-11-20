@@ -31,8 +31,8 @@ namespace FoodWaste.Controllers
             var ext = (from it in db.Requests
                        where it.id == id
                        select it).SingleOrDefault();
-            ViewBag.List = new SelectList(Employees, "id", "Name");
-            return View();
+            //ViewBag.List = new SelectList(Employees, "id", "Name");
+            return View(ext);
         }
         [HttpPost]
         public ActionResult AddEmployees(Request r)
