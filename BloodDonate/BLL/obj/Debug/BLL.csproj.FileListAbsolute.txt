@@ -1,0 +1,14 @@
+F:\ASP Dot Net\BloodDonate\BLL\bin\Debug\BLL.dll
+F:\ASP Dot Net\BloodDonate\BLL\bin\Debug\BLL.pdb
+F:\ASP Dot Net\BloodDonate\BLL\bin\Debug\AutoMapper.dll
+F:\ASP Dot Net\BloodDonate\BLL\bin\Debug\DAL.dll
+F:\ASP Dot Net\BloodDonate\BLL\bin\Debug\EntityFramework.dll
+F:\ASP Dot Net\BloodDonate\BLL\bin\Debug\DAL.pdb
+F:\ASP Dot Net\BloodDonate\BLL\bin\Debug\DAL.dll.config
+F:\ASP Dot Net\BloodDonate\BLL\bin\Debug\AutoMapper.xml
+F:\ASP Dot Net\BloodDonate\BLL\bin\Debug\EntityFramework.xml
+F:\ASP Dot Net\BloodDonate\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+F:\ASP Dot Net\BloodDonate\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+F:\ASP Dot Net\BloodDonate\BLL\obj\Debug\BLL.csproj.CopyComplete
+F:\ASP Dot Net\BloodDonate\BLL\obj\Debug\BLL.dll
+F:\ASP Dot Net\BloodDonate\BLL\obj\Debug\BLL.pdb
